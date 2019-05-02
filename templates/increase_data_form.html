@@ -50,30 +50,33 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Кластеризация поисковых запросов</h1>
-        <p class="lead">Махмудов Магомед Риадович</p>
-        <p><small><a href='/'><< Назад</a></small></p>
+        <p class="lead">Увеличения объема разметочных данных</p>
+        <p><small><a href='/increase_data_table'>УРД таблица >></a></small></p>
         <br>
         <br>
         <br>
         <br>
-        <table class="table table-striped">
-            <thead class="thead-dark">
-                <tr>
-                <!--<th scope="col">#</th>-->
-                <th scope="col">Запрос</th>
-                <th scope="col">Кластер</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for item in data %}
-                <tr>
-                <!--<th scope="row"></th>-->
-                <td>{{item[1]}}</td>
-                <td>{{item[0]}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-            </table>
+        <div>
+          <form class="card card-sm" method='post' action='/increase_data_table'>
+				<div class="card-body row no-gutters align-items-center">
+					<div class="col-auto">
+						<i class="fas fa-search h4 text-body"></i>
+					</div>
+					<!--end of col-->
+					<div class="col">
+						<input name='query' class="form-control form-control-lg form-control-borderless" type="search" placeholder="Введите запрос...">
+					</div>
+                    <div class='col'>
+                        <input name='mark' class="form-control form-control-lg form-control-borderless" type="search" placeholder="Введите метку...">
+                    </div>
+					<!--end of col-->
+					<div class="col-auto">
+						<button class="btn btn-lg btn-success" type="submit" style='margin-left:20px'>ок</button>
+					</div>
+					<!--end of col-->
+				</div>
+			</form>
+        </div>
       </div>
     </div>
   </div>

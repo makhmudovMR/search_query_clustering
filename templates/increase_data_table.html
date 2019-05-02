@@ -50,18 +50,21 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">Кластеризация поисковых запросов</h1>
-        <p class="lead">Махмудов Магомед Риадович</p>
+        <p class="lead">Увеличения объема разметочных данных</p>
         <p><small><a href='/'><< Назад</a></small></p>
         <br>
         <br>
         <br>
         <br>
+        {{query}}
+        {{mark}}
         <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
                 <!--<th scope="col">#</th>-->
                 <th scope="col">Запрос</th>
                 <th scope="col">Кластер</th>
+                <th scope="col">Метка</th>
                 </tr>
             </thead>
             <tbody>
@@ -70,6 +73,7 @@
                 <!--<th scope="row"></th>-->
                 <td>{{item[1]}}</td>
                 <td>{{item[0]}}</td>
+                <td>{{item[2]}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
